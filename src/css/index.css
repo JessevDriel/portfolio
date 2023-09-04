@@ -1,0 +1,114 @@
+#shadow {
+    color: #c5c5c5;
+    transform: scale(1, 0);
+    transition: all 1.5s;
+  
+    filter: blur(4px);
+    margin-top: -11%;
+}
+
+.hover\:skew-y-3:hover #shadow {
+    opacity: 1;
+    transform: scale(1, 0.3);
+    filter: blur(4px);
+    margin-top: 0;
+}
+
+
+.slideIn1 {
+    animation: animation1 2.5s ease-in-out;
+    display: block;
+  }
+
+.slideIn2 {
+    animation: animation2 1.5s ease-in-out;
+    display: block;
+}
+
+.slideIn3 {
+    animation: animation3 1.0s ease-in-out;
+    display: block;
+}
+
+.slideIn4 {
+    animation: animation4 1.0s ease-in-out;
+    display: block;
+}
+
+.slideIn5 {
+    animation: animation5 1.5s ease-in-out;
+    display: block;
+}
+
+.slideIn6 {
+    animation: animation6 1.5s ease-in-out;
+    display: block;
+}
+  /* @keyframes animation1 {
+    from {
+      transform: translateX(-100%);
+      opacity: 0.5;
+    }
+  
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  
+  } */
+  @keyframes animation2 {
+    from {
+      transform: translateX(-200%);
+    }
+  
+    to {
+      transform: translateX(0);
+    }
+  
+  }
+
+  @keyframes animation3 {
+    from {
+      transform: translateX(-150%);
+    }
+  
+    to {
+      transform: translateX(0);
+    }
+  
+  }
+
+  @keyframes animation4 {
+    from {
+      transform: translateX(150%);
+    }
+  
+    to {
+      transform: translateX(0);
+    }
+  
+  }
+
+  @keyframes animation5 {
+    from {
+      transform: translateX(-150%);
+    }
+  
+    to {
+      transform: translateX(0);
+    }
+  
+  }
+
+  @keyframes animation6 {
+    from {
+      transform: translateX(150%);
+    }
+  
+    to {
+      transform: translateX(0);
+    }
+  
+  } 
+
+
