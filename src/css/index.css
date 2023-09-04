@@ -112,3 +112,7 @@
   } 
 
 
+
+::-webkit-scrollbar {
+  display: none;
+}
