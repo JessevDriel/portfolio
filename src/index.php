@@ -9,6 +9,11 @@
     <link rel="stylesheet" href="../src/css/index.css">
 </head>
 <body onload="slideIn()"  class="font-medium overflow-x-hidden">
+
+<?php if (isset($_GET['error'])): ?>
+		<p><?php echo $_GET['error']; ?></p>
+	<?php endif ?>
+
 <div class="flex justify-end">
   <div class=" absolute mt-[40px]">
     <div class="w-[calc(1050px+2rem)] h-[100%] bg-slate-100 border-l-[250px] border-b-[1025px] border-l-white border-b-transparent -z-10 relative "></div>
@@ -31,6 +36,7 @@
         <li class="mr-1">
           <a class="bg-white inline-block py-2 px-4 text-blue-500 hover:text-blue-800 duration-500 font-semibold" href="#contact">Contact</a>
         </li>
+       
       </ul>
     </nav>
 
@@ -88,7 +94,7 @@
     </div>
   </div>
     <div class="ml-[150px] mr-[150px] grid grid-cols-2 text-center mb-10 h-[1000px]">
-      <div class=" hidden animation3">
+      <div class=" hidden animation3 animate-">
         <center>
           <img src="img/Placeholderimg.svg" alt="">
           test
@@ -112,15 +118,22 @@
           test
         </center>
       </div>
-
+    </div>
       <center>
-        <form method="post" action="upload.php" enctype="multipart/form-data">
-          <input type="file" name="my_image">
-          <input type="submit" name="submit" value="Upload">
-        </form>
+      <form action="upload.php"
+           method="post"
+           enctype="multipart/form-data">
+
+           <input type="file" 
+                  name="my_image">
+
+           <input type="submit" 
+                  name="submit"
+                  value="Upload">
+     </form>
       </center>
 
-    </div>
+   
     <div class="flex items-center justify-center p-12" id="contact">
       <div class="mx-auto w-full max-w-[550px]">
         <form method="post" action="mail.php">

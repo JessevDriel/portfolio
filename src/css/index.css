@@ -25,7 +25,7 @@
     display: block;
 }
 
-.slideIn3 {
+/* .slideIn3 {
     animation: animation3 1.0s ease-in-out;
     display: block;
 }
@@ -43,7 +43,7 @@
 .slideIn6 {
     animation: animation6 1.5s ease-in-out;
     display: block;
-}
+} */
   /* @keyframes animation1 {
     from {
       transform: translateX(-100%);
