@@ -1,3 +1,13 @@
+<?php
+require('upload.php');
+session_start();
+?>
+
+<?php
+
+
+
+?>
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
@@ -8,11 +18,7 @@
     <link rel="stylesheet" href="../dist/output.css">
     <link rel="stylesheet" href="../src/css/index.css">
 </head>
-<body onload="slideIn()"  class="font-medium overflow-x-hidden">
-
-<?php if (isset($_GET['error'])): ?>
-		<p><?php echo $_GET['error']; ?></p>
-	<?php endif ?>
+<body onload="slideIn()"  class="font-medium overflow-hidden">
 
 <div class="flex justify-end">
   <div class=" absolute mt-[40px]">
@@ -120,17 +126,32 @@
       </div>
     </div>
       <center>
-      <form action="upload.php"
-           method="post"
-           enctype="multipart/form-data">
+      <?php
+    // List files from the database and provide links to view them
+    $listSql = "SELECT ID, title, image FROM fileup"; // Change the query to include the 'image' column
+    $listResult = mysqli_query($conn, $listSql);
 
-           <input type="file" 
-                  name="my_image">
+    if ($listResult && mysqli_num_rows($listResult) > 0) {
+        while ($row = mysqli_fetch_assoc($listResult)) {
+            $fileId = $row['ID'];
+            $title = $row['title'];
+            $imagePath = 'img/' . $row['title'] . '.jpg'; // Update the path to match your directory structure
 
-           <input type="submit" 
-                  name="submit"
-                  value="Upload">
-     </form>
+            // Display the image and title
+            echo "<img src='$imagePath' alt='$title'><br>";
+        }
+    } else {
+        echo "No files found.";
+    }
+    ?>
+
+      <form method="post" enctype="multipart/form-data">
+        <label>Title</label>
+        <input type="text" name="title"> 
+        <label>File Upload</label>
+        <input type="File" name="file">
+        <input type="submit" name="submit">
+      </form>
       </center>
 
    

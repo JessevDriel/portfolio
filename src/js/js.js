@@ -1,6 +1,6 @@
 window.addEventListener("scroll", function () {
 const distance = window.scrollY
-console.log(distance);
+// console.log(distance);
 
 
 // if(distance > 200){
