@@ -11,7 +11,7 @@
 <body onload="slideIn()"  class="font-medium overflow-x-hidden">
 <div class="flex justify-end">
   <div class=" absolute mt-[40px]">
-    <div class="w-[calc(900px+2rem)] h-[100%] bg-slate-100 border-l-[250px] border-b-[1025px] border-l-white border-b-transparent -z-10 relative "></div>
+    <div class="w-[calc(1050px+2rem)] h-[100%] bg-slate-100 border-l-[250px] border-b-[1025px] border-l-white border-b-transparent -z-10 relative "></div>
   </div>
 </div>
 
@@ -100,13 +100,13 @@
           test
         </center>
       </div>
-      <div class=" hidden animation5">
+      <div class=" hidden animation3">
         <center>
           <img src="img/Placeholderimg.svg" alt="">
           test
         </center>
       </div>
-      <div class=" hidden animation6 ">
+      <div class=" hidden animation4">
         <center>
           <img src="img/Placeholderimg.svg" alt="">
           test
@@ -116,7 +116,7 @@
     </div>
     <div class="flex items-center justify-center p-12" id="contact">
       <div class="mx-auto w-full max-w-[550px]">
-        <form method="POST">
+        <form method="post" action="mail.php">
           <div class="mb-5">
             <label for="name" class="mb-3 block text-base font-medium text-[#07074D]"> Full Name</label>
             <input type="text" name="name" id="name" placeholder="Full Name" class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-blue-700 focus:shadow-md"/>
