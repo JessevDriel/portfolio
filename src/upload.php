@@ -21,7 +21,9 @@ if (isset($_POST["submit"])) {
 
     $tname = $_FILES["File"]["tmp_name"]; // Use "File" instead of "files"
 
-    $uploads_dir = 'img/';
+    $uploads_dir = '/src/img/';
+    
+    
 
     move_uploaded_file($tname, $uploads_dir . '/' . $pname);
 
@@ -33,3 +35,4 @@ if (isset($_POST["submit"])) {
         echo "Error";
     }
 }
+

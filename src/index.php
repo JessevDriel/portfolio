@@ -135,7 +135,7 @@ session_start();
         while ($row = mysqli_fetch_assoc($listResult)) {
             $fileId = $row['ID'];
             $title = $row['title'];
-            $imagePath = 'img/' . $row['title'] . '.jpg'; // Update the path to match your directory structure
+            $imagePath = '/src/img/' . $row['title']; // Update the path to match your directory structure
 
             // Display the image and title
             echo "<img src='$imagePath' alt='$title'><br>";
