@@ -144,15 +144,18 @@ session_start();
         echo "No files found.";
     }
     ?>
+ 
+    
 
-      <form method="post" enctype="multipart/form-data">
+    <center>
+      <form method="post" enctype="multipart/form-data" >
         <label>Title</label>
         <input type="text" name="title"> 
         <label>File Upload</label>
         <input type="File" name="file">
         <input type="submit" name="submit">
       </form>
-      </center>
+    </center>
 
    
     <div class="flex items-center justify-center p-12" id="contact">
