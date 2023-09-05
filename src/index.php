@@ -113,6 +113,13 @@
         </center>
       </div>
 
+      <center>
+        <form method="post" action="upload.php" enctype="multipart/form-data">
+          <input type="file" name="my_image">
+          <input type="submit" name="submit" value="Upload">
+        </form>
+      </center>
+
     </div>
     <div class="flex items-center justify-center p-12" id="contact">
       <div class="mx-auto w-full max-w-[550px]">
