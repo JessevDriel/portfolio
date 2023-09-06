@@ -2,7 +2,7 @@
     $name = $_POST['name'];
     $email= $_POST['email'];
     $message= $_POST['message'];
-    $to = "088878@glr.nl";
+    $to = "Contact@jessevandriel.nl";
     $subject = $_POST['subject'];
     $txt = $name . "\r\n" . $email . "\r\n" . $message;
     $headers = "From: Contact@jessevandriel.nl" ;

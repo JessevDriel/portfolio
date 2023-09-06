@@ -137,7 +137,7 @@ session_start();
     </div>
       <center>
     <center>
-      <form method="post" enctype="multipart/form-data" >
+      <form method="post" enctype="multipart/form-data">
         <label>Title</label>
         <input type="text" name="title"> 
         <label>File Upload</label>
