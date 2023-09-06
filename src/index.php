@@ -99,52 +99,51 @@ session_start();
       <p class="mt-24 text-5xl text-blue-700">My work</p>
     </div>
   </div>
-    <div class="ml-[150px] mr-[150px] grid grid-cols-2 text-center mb-10 h-[1000px]">
-      <div class=" hidden animation3 animate-">
+    <div class="ml-[150px] mr-[150px] grid grid-cols-2 text-center mb-10">
+      <!-- <div class=" hidden animation3 animate-">
         <center>
           <img src="img/Placeholderimg.svg" alt="">
           test
         </center>
-      </div>
-      <div class=" hidden animation4">
-        <center>
-          <img src="img/Placeholderimg.svg" alt="">
-          test
-        </center>
-      </div>
-      <div class=" hidden animation3">
-        <center>
-          <img src="img/Placeholderimg.svg" alt="">
-          test
-        </center>
-      </div>
-      <div class=" hidden animation4">
-        <center>
-          <img src="img/Placeholderimg.svg" alt="">
-          test
-        </center>
-      </div>
-    </div>
-      <center>
+      </div> -->
+     
       <?php
+      
     // List files from the database and provide links to view them
     $listSql = "SELECT ID, title, image FROM fileup"; // Change the query to include the 'image' column
     $listResult = mysqli_query($conn, $listSql);
 
     if ($listResult && mysqli_num_rows($listResult) > 0) {
+
+      $i = 0;
+
         while ($row = mysqli_fetch_assoc($listResult)) {
             $fileId = $row['ID'];
             $title = $row['title'];
-            $imagePath = '/src/img/' . $row['title']; // Update the path to match your directory structure
+            $imagePath = 'img/' . $row['image']; // Update the path to match your directory structure
 
             // Display the image and title
-            echo "<img src='$imagePath' alt='$title'><br>";
-        }
-    } else {
-        echo "No files found.";
-    }
-    ?>
+
+            ?>
+
+            <div class=" hidden  animation<?= 3+($i%2)?>">
+              <center>
+                <img class="projectimg" src="<?= $imagePath ?>" alt="">
+                <div><?= $title ?></div>
+              </center>
+           </div>
+            
+            <?php
+            $i++;
+          }
+      } else {
+          echo "No files found.";
+      }
+            ?>
  
+    </div>
+      <center>
+
     
 
     <center>
@@ -152,7 +151,7 @@ session_start();
         <label>Title</label>
         <input type="text" name="title"> 
         <label>File Upload</label>
-        <input type="File" name="file">
+        <input type="file" name="file">
         <input type="submit" name="submit">
       </form>
     </center>
