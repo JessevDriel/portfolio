@@ -99,7 +99,7 @@ session_start();
       <p class="mt-24 text-5xl text-blue-700">My work</p>
     </div>
   </div>
-    <div class="ml-[150px] mr-[150px] grid grid-cols-2 text-center mb-10">
+    <div class="ml-[150px] mr-[150px] grid grid-cols-2 text-center">
       <!-- <div class=" hidden animation3 animate-">
         <center>
           <img src="img/Placeholderimg.svg" alt="">
@@ -109,8 +109,7 @@ session_start();
      
       <?php
       
-    // List files from the database and provide links to view them
-    $listSql = "SELECT ID, title, image FROM fileup"; // Change the query to include the 'image' column
+    $listSql = "SELECT ID, title, image FROM fileup";
     $listResult = mysqli_query($conn, $listSql);
 
     if ($listResult && mysqli_num_rows($listResult) > 0) {
@@ -120,19 +119,14 @@ session_start();
         while ($row = mysqli_fetch_assoc($listResult)) {
             $fileId = $row['ID'];
             $title = $row['title'];
-            $imagePath = 'img/' . $row['image']; // Update the path to match your directory structure
-
-            // Display the image and title
-
+            $imagePath = 'img/' . $row['image']; 
             ?>
-
             <div class=" hidden  animation<?= 3+($i%2)?>">
               <center>
                 <img class="projectimg" src="<?= $imagePath ?>" alt="">
                 <div><?= $title ?></div>
               </center>
            </div>
-            
             <?php
             $i++;
           }
@@ -140,12 +134,8 @@ session_start();
           echo "No files found.";
       }
             ?>
- 
     </div>
       <center>
-
-    
-
     <center>
       <form method="post" enctype="multipart/form-data" >
         <label>Title</label>
@@ -156,7 +146,6 @@ session_start();
       </form>
     </center>
 
-   
     <div class="flex items-center justify-center p-12" id="contact">
       <div class="mx-auto w-full max-w-[550px]">
         <form method="post" action="mail.php">

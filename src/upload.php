@@ -1,15 +1,12 @@
 <?php 
 
-// Toegangsgegevens
 $db_server = 'rdbms.strato.de';
 $db_user = 'dbu5508730';
 $db_password = 'jessevandriel';
 $db_name = 'dbs11958063';
 
-// Create connection
 $conn = mysqli_connect($db_server, $db_user, $db_password, $db_name);
 
-// Check connection
 if (!$conn) {
   die("Connection failed: " . mysqli_connect_error());
 }
