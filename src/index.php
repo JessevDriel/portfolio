@@ -27,7 +27,7 @@ session_start();
 </div>
 
   <main class="z-20">
-    <nav class="bg-white">
+    <nav class="bg-black">
       <div class="absolute">
         <a class="bg-white inline-block border-l border-t border-r rounded-t ml-20 px-10 py-2 text-blue-700  hover:text-blue-500 duration-500 font-semibold" href="#">Jesse van Driel</a>
       </div>
@@ -52,7 +52,7 @@ session_start();
         <div class="hover:skew-y-3 transition duration-700">
           <div>
             <p class="text-5xl text-black">I'm Jesse,</p>
-            <p class="text-5xl text-blue-700 border-b-2">A Software Developer</p>
+            <p class="text-5xl text-black border-b-2">A Software Developer</p>
           </div>
           <div class="text-white drop-shadow-2xl" id="shadow">
             <p class="text-5xl">I'm Jesse,</p>
@@ -181,7 +181,7 @@ session_start();
       </div>
     </div>
   
-      <footer class=" bg-slate-100 flex flex-col justify-center items-center h-[60px] " id="footer">
+      <footer class=" bg-slate-100 flex flex-col justify-center items-center h-[60px] border-t border-blue-700" id="footer">
         <div>
           <center><div><p class="w-[300px] ">Jesse van Driel</p></div></center> 
           <center><div><p class="w-[300px] ">Copyright © 2023. All rights reserved.</p></div></center> 
