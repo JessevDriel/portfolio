@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="ad8f7e1a-3275-4f5b-89a2-30ed04a61a9e" name="strato">
+        <fileTransfer accessType="SFTP" host="ssh.strato.com" port="22" sshConfigId="c8c617ef-dad2-4920-9c92-b66706f39bd8" sshConfig="jessevandriel.nl@ssh.strato.com:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

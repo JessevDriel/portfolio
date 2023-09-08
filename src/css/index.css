@@ -25,6 +25,10 @@
     display: block;
 }
 
+.slideIn3 {
+  animation: animation3 1.5s ease-in-out;
+  display: block;
+}
 
   @keyframes animation2 {
     from {
@@ -48,42 +52,23 @@
   
   }
 
-  @keyframes animation4 {
-    from {
-      transform: translateX(150%);
-    }
-  
-    to {
-      transform: translateX(0);
-    }
-  
-  }
 
-  @keyframes animation5 {
-    from {
-      transform: translateX(-150%);
-    }
-  
-    to {
-      transform: translateX(0);
-    }
-  
-  }
 
-  @keyframes animation6 {
-    from {
-      transform: translateX(150%);
-    }
-    to {
-      transform: translateX(0);
-    }
-  } 
+
 
 ::-webkit-scrollbar {
   display: none;
 }
 
 .projectimg {
-  width: 300px;
-  height: 300px;
+  max-width: 400px;
+  max-height: 400px;
+  border-radius: 10px;
+
 }
+
+#footer {
+  height: 60px;
+  border-top: 1px solid rgb(29 78 216);
+}
+

@@ -15,10 +15,10 @@ session_start();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JessevanDriel</title>
-    <link rel="stylesheet" href="../dist/output.css">
+    <link rel="stylesheet" href=" ../dist/output.css ">
     <link rel="stylesheet" href="../src/css/index.css">
 </head>
-<body onload="slideIn()"  class="font-medium overflow-hidden">
+<body onload="slideIn()"  class="font-medium ">
 
 <div class="flex justify-end">
   <div class=" absolute mt-[40px]">
@@ -60,7 +60,7 @@ session_start();
           </div>
         </div>
           <div>
-              <button class="border-2 border-gray-400 text-blue-500 my-4 rounded-full pt-1 pb-1 pl-1.5 pr-1.5 hover:scale-x-110 transition duration-1000 bottom-0 absolute font-bold">Contact me</button>
+              <a class="border-2 border-gray-400 text-blue-500 my-4 rounded-full pt-1 pb-1 pl-1.5 pr-1.5 hover:scale-x-110 transition duration-1000 bottom-0 absolute font-bold" href="#contact">Contact me</a>
           </div>
       </div>
     
@@ -85,9 +85,7 @@ session_start();
         <center>
           <hr class="border-b-2 border-blue-700 w-6/12 mt-10">
           <div class="bg-slate-100 mb-10 w-100vw h-10"></div>
-
         </center>
-
       <div>
         <p></p>
       </div>
@@ -99,14 +97,8 @@ session_start();
       <p class="mt-24 text-5xl text-blue-700">My work</p>
     </div>
   </div>
-    <div class="ml-[150px] mr-[150px] grid grid-cols-2 text-center">
-      <!-- <div class=" hidden animation3 animate-">
-        <center>
-          <img src="img/Placeholderimg.svg" alt="">
-          test
-        </center>
-      </div> -->
-     
+    <div class="ml-[150px] mr-[150px] grid grid-cols-2 text-center mb-32 mt-32">
+      
       <?php
       
     $listSql = "SELECT ID, title, image FROM fileup";
@@ -119,33 +111,47 @@ session_start();
         while ($row = mysqli_fetch_assoc($listResult)) {
             $fileId = $row['ID'];
             $title = $row['title'];
-            $imagePath = 'img/' . $row['image']; 
+            $imagePath = 'img/' . $row['image'];
             ?>
-            <div class=" hidden  animation<?= 3+($i%2)?>">
+            <div>
               <center>
-                <img class="projectimg" src="<?= $imagePath ?>" alt="">
-                <div><?= $title ?></div>
+                <img class=" projectimg hover:scale-105 transition duration-700" src="<?= $imagePath ?>" alt="">
+                <div class="mb-10 text-xl font-bold " ><?= $title ?></div>
               </center>
            </div>
             <?php
             $i++;
           }
       } else {
-          echo "No files found.";
+          echo "  No files found.";
+          
       }
             ?>
     </div>
-      <center>
     <center>
-      <form method="post" enctype="multipart/form-data">
-        <label>Title</label>
-        <input type="text" name="title"> 
-        <label>File Upload</label>
-        <input type="file" name="file">
-        <input type="submit" name="submit">
-      </form>
+      <div class="bg-white p-8 rounded-lg shadow-xl w-96 text-lg font-bold border-black mb-24 ">
+        <form method="post" enctype="multipart/form-data">
+            <div class="mb-4">
+                <label for="title" class="block mb-1">Title</label>
+                <input  type="text" name="title" id="title" maxlength="30"  class="w-full px-3 py-2 border rounded-lg">
+            </div>
+            <label for="file" class="block mb-1 ">File Upload</label>
+
+            <div class="mb-4 border rounded-lg">
+                <input type="file" name="file" id="file" class="w-full px-3 py-2 ml-10">
+            </div>
+            <div>
+                <button type="submit" name="submit" class="bg-blue-700 text-white px-4 py-2 rounded-lg hover:bg-blue-600">Submit</button>
+            </div>
+        </form>
+      </div>
+      
     </center>
 
+    <center><hr class="border-b-2 border-blue-700 w-6/12 mt-10"></center>
+    <center>
+      <div class="mt-16 mb-14 text-blue-700 text-5xl"  >Contact Me</div>
+    </center>
     <div class="flex items-center justify-center p-12" id="contact">
       <div class="mx-auto w-full max-w-[550px]">
         <form method="post" action="mail.php">
@@ -167,13 +173,22 @@ session_start();
           </div>
           <center>
             <div>
-              <button class="hover:shadow-form rounded-md bg-blue-700 py-3 px-8 text-base font-semibold text-white outline-none">Submit</button>
+              <button class="hover:shadow-form rounded-md bg-blue-700 hover:bg-blue-600 py-3 px-8 text-base font-semibold text-white outline-none">Submit</button>
             </div>
           </center>
        
         </form>
       </div>
     </div>
+  
+      <footer class=" bg-slate-100 flex flex-col justify-center items-center h-[60px] " id="footer">
+        <div>
+          <center><div><p class="w-[300px] ">Jesse van Driel</p></div></center> 
+          <center><div><p class="w-[300px] ">Copyright © 2023. All rights reserved.</p></div></center> 
+        </div>
+      </footer>
+  
+ 
 
   </main>
   <script src="js/js.js"></script>

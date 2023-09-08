@@ -13,12 +13,6 @@ if(distance > 700){
 if(distance > 700){
     document.querySelector(".animation4").classList.add("slideIn4");
 }
-if(distance > 900){
-    document.querySelector(".animation5").classList.add("slideIn5");
-}
-if(distance > 900){
-    document.querySelector(".animation6").classList.add("slideIn6");
-}
 
 
 })  
