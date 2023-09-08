@@ -52,7 +52,7 @@ session_start();
         <div class="hover:skew-y-3 transition duration-700">
           <div>
             <p class="text-5xl text-black">I'm Jesse,</p>
-            <p class="text-5xl text-black border-b-2">A Software Developer</p>
+            <p class="text-5xl text-blue-700 border-b-2">A Software Developer</p>
           </div>
           <div class="text-white drop-shadow-2xl" id="shadow">
             <p class="text-5xl">I'm Jesse,</p>
@@ -78,7 +78,7 @@ session_start();
         <div class="text-center items-center hover:scale-105 transition duration-700">
           <center>
             <div class=" text-5xl text-blue-700 w-6/12">Who am I?</div>
-            <div class="text-xl w-6/12">Hello, I'm Jesse, a Software Developer who is currently studying at Grafisch Lyceum Rotterdam in the Netherlands. My passion lies in programming, with a particular focus on frontend development, and I also have some experience in backend development.</div>
+            <div class="text-xl w-6/12">Hello, I'm Jesse, a Software Developer who is currently studying at Grafisch Lyceum Rotterdam in the Netherlands. My passion lies in programming, with a particular focus on frontend development, I also have some experience in backend development.</div>
           </center>
         </div>
       </div>
@@ -116,7 +116,7 @@ session_start();
             <div>
               <center>
                 <img class=" projectimg hover:scale-105 transition duration-700" src="<?= $imagePath ?>" alt="">
-                <div class="mb-10 text-xl font-bold " ><?= $title ?></div>
+                <div class="mb-10 mt-10 text-2xl font-bold " ><?= $title ?></div>
               </center>
            </div>
             <?php
